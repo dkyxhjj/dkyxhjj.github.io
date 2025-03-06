@@ -12,8 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply theme
     const setTheme = (theme) => {
-        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+            document.body.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.body.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
         localStorage.setItem('theme', theme);
+        
+        // Update icons visibility
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+        
+        if (theme === 'dark') {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        } else {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
     };
 
     // Initialize theme
@@ -21,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle theme
     themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const currentTheme = localStorage.getItem('theme') || getPreferredTheme();
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         setTheme(newTheme);
     });
