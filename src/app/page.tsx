@@ -42,7 +42,7 @@ export default function Home() {
             Rising sophomore @ UCLA majoring in Statistics and Data Science and minoring in Data Science Engineering (DSE), interested in geospatial engineering, software engineering and deep machine learning. 
           </p>
           <p className="text-gray-600 leading-relaxed">
-            This summer, I'm focusing on:
+            This summer, I&apos;m focusing on:
           </p>
           <ul className="text-gray-600 list-disc pl-8">
             <li>Data Engineering Internship @ RBC</li>
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="col-span-2 md:col-span-1">
               <h3 className="text-lg mb-2 text-gray-800">Programming Languages</h3>
               <div className="space-y-2">
-                {['JavaScript', 'TypeScript', 'Python','C++'].map((skill) => (
+                {["JavaScript", "TypeScript", "Python","C++"].map((skill) => (
                   <div key={skill} className="text-gray-600 text-sm">
                     {skill}
                   </div>
@@ -92,7 +92,7 @@ export default function Home() {
             <div className="col-span-2 md:col-span-1">
               <h3 className="text-lg mb-2 text-gray-800">Frontend</h3>
               <div className="space-y-2">
-                {['React', 'Next.js', 'Tailwind CSS','ShadCN'].map((skill, index) => (
+                {["React", "Next.js", "Tailwind CSS","ShadCN"].map((skill, index) => (
                   <div key={index} className="text-gray-600 text-sm">
                     {skill}
                   </div>
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="col-span-2 md:col-span-1">
               <h3 className="text-lg mb-2 text-gray-800">Backend</h3>
               <div className="space-y-2">
-                {['Flask','FastAPI','OpenCV','Node.js'].map((skill, index) => (
+                {["Flask","FastAPI","OpenCV","Node.js"].map((skill, index) => (
                   <div key={index} className="text-gray-600 text-sm">
                     {skill}
                   </div>
@@ -112,7 +112,7 @@ export default function Home() {
             <div className="col-span-2 md:col-span-1">
               <h3 className="text-lg mb-2 text-gray-800">Databases & Tools</h3>
               <div className="space-y-2">
-                {['MongoDB','Supabase','Git',"Docker"].map((skill) => (
+                {["MongoDB","Supabase","Git","Docker"].map((skill) => (
                   <div key={skill} className="text-gray-600 text-sm">
                     {skill}
                   </div>

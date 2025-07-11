@@ -2,8 +2,10 @@
 const nextConfig = {
   output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/dkyxhjj.github.io' : '',
+  // Configure images for static export
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './image-loader.js',
   },
 };
 
