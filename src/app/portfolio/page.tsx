@@ -1,3 +1,7 @@
+
+'use client';
+import DecryptedText from '../components/DecryptedText';
+
 export default function Portfolio() {
   const projects = [
     {
@@ -38,16 +42,58 @@ export default function Portfolio() {
         {/* About */}
         <section className="mb-16">
           <h2 className="text-lg font-semibold mb-4 text-gray-800">About</h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Rising sophomore @ UCLA majoring in Statistics and Data Science and minoring in Data Science Engineering (DSE), interested in geospatial engineering, software engineering and deep machine learning. 
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            This summer, I&apos;m focusing on:
-          </p>
-          <ul className="text-gray-600 list-disc pl-8">
-            <li>Data Engineering Internship @ RBC</li>
-            <li>CS 32: Data Structures & Algorithms</li>
-            <li>Recruitment Prep: Blind 75</li>
+          <DecryptedText 
+            text="Rising sophomore @ UCLA majoring in Statistics and Data Science and minoring in Data Science Engineering (DSE), interested in geospatial engineering, software engineering and deep machine learning."
+            sequential={true}
+            speed={20}
+            className="text-gray-600 leading-relaxed mb-4"
+            encryptedClassName="text-gray-400"
+            animateOn="view"
+            parentClassName="block mb-4"
+          />
+          <DecryptedText 
+            text="This summer I'll be working on"
+            sequential={true}
+            speed={20}
+            className="text-gray-600 leading-relaxed mb-4"
+            encryptedClassName="text-gray-400"
+            animateOn="view"
+            parentClassName="block mb-4"
+          />
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <DecryptedText 
+                text="Data Engineering Internship @ RBC"
+                sequential={true}
+                speed={100}
+                className="text-gray-600 leading-relaxed"
+                encryptedClassName="text-gray-400"
+                animateOn="view"
+                parentClassName="block"
+              />
+            </li>
+            <li>
+              <DecryptedText 
+                text="CS 32: Data Structures & Algorithms"
+                sequential={true}
+                speed={100}
+                className="text-gray-600 leading-relaxed"
+                encryptedClassName="text-gray-400"
+                animateOn="view"
+                parentClassName="block"
+              />
+            </li>
+            <li>
+              <DecryptedText 
+                text="Recruitment Prep: Blind 75"
+                sequential={true}
+                speed={100}
+                className="text-gray-600 leading-relaxed"
+                encryptedClassName="text-gray-400"
+                animateOn="view"
+                parentClassName="block"
+              />
+            </li>
           </ul>
         </section>
 
