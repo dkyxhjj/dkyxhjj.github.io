@@ -26,11 +26,12 @@ export default function LandingPage() {
             <div className="flex flex-wrap justify-center gap-4">
               
               <Link 
-                href="/portfolio" 
+                href="/construction" 
                 className="px-8 py-3 border border-white hover:bg-white hover:bg-opacity-20 text-white font-medium transition-all"
               >
                 View Portfolio
               </Link>
+
             </div>
           </div>
         </div>
