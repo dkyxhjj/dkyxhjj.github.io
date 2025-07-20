@@ -3,25 +3,6 @@ import React, { useState } from 'react';
 import DarkVeil from '../components/DarkVeil'
 import Link from 'next/link';
 
-const skillsByCategory: Record<string, string[]> = {
-    backend: ["Flask", "FastAPI", "TensorFlow", "PyTorch", "OpenCV"],
-    eda: ["Pandas", "NumPy", "Seaborn", "Matplotlib"],
-    frontend: ["React", "Next.js", "Tailwind CSS", "ShadCN"],
-    languages: ["Python", "TypeScript", "JavaScript", "C++"],
-    tools: ["Git", "Docker", "DBeaver", "MongoDB", "Supabase"]
-};
-
-const categories = [
-  { value: 'all', label: 'all' },
-  { value: 'backend', label: '  ackend' },
-  { value: 'eda', label: 'EDA' },
-  { value: 'frontend', label: 'Frontend' },
-  { value: 'languages', label: 'Languages' },
-  { value: 'tools', label: 'Tools' }
-];
-
-const allSkills = Object.values(skillsByCategory).flat();
-
 const experiences = [
   {
     title: "data engineer intern",
@@ -85,8 +66,6 @@ const projects = [
 ];
 
 export default function About() {
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-    const displayedSkills = selectedCategory.value === 'all' ? allSkills : skillsByCategory[selectedCategory.value];
     return (
         <>
             <DarkVeil />    
