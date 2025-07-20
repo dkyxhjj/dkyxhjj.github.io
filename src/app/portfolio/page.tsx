@@ -1,5 +1,4 @@
 'use client'
-import React, { useState } from 'react';
 import DarkVeil from '../components/DarkVeil'
 import Link from 'next/link';
 
