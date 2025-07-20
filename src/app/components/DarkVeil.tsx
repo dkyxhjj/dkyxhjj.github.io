@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec2 } from "ogl";
-import "./DarkVeil.css";
 
 const vertex = `
 attribute vec2 position;
@@ -136,7 +135,6 @@ export default function DarkVeil({
     let frame = 0;
 
     const loop = () => {
-      frame++;
       program.uniforms.uTime.value =
         ((performance.now() - start) / 1000) * speed;
       program.uniforms.uHueShift.value = hueShift;
@@ -166,7 +164,7 @@ export default function DarkVeil({
   return (
     <canvas
       ref={ref}
-      className="darkveil-canvas"
+      className="fixed top-0 left-0 w-full h-full -z-10"
     />
   );
 }

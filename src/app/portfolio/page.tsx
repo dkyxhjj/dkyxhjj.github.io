@@ -1,198 +1,149 @@
-'use client';
-import TiltedTile from '../components/TiltedTile';
-import Aurora from '../components/Aurora';
+'use client'
+import React, { useState } from 'react';
+import DarkVeil from '../components/DarkVeil'
+import Link from 'next/link';
 
-export default function Portfolio() { 
-  const projects = [
-    {
-      title: "Embers",
-      description: "A platform that processes home videos to create insurance valuation reports, assisting in claims and recovery.",
-      tech: "OpenCV, YoloV11, Google Gemini, Flask, Supabase, NextJS",
-      link: "https://devpost.com/software/insurefire",
-      award: "Best use of Gemini API, First Place Overall in FinTech Track @LAHacks"
-    },
-    {
-      title: "iAssist", 
-      description: "Object detection vision assistant for real-time navigation using object detection, identifying obstacles, safe pathways, and providing audio guidance on smartphones.",
-      tech: "OpenCV, Ultralytics, Groq, Flask, Supabase, NextJS",
-      link: "https://devpost.com/software/iassist-qcnmbp",
-      award: "Best use of Groq API @ devFest"
-    },
-    {
-      title: "Achieving Carbon Credit Accuracy Using Generative AI",
-      description: "ML Model that leverages advanced Geographic Data (LiDAR) to improve precision in predicting carbon sequestration rates for global carbon credit programs",
-      tech: "Rasterio, Python",
-      link: "https://www.linkedin.com/in/richardli14/details/projects/1737504844627/single-media-viewer/?profileId=ACoAACwQIR8BckOiClGazYcR7ZjgWeIbAnoj-Qw",
-      award: "National Research Council: Digital Research Award @BigDataChallenge"
-    }
-  ];
+const skillsByCategory: Record<string, string[]> = {
+    backend: ["Flask", "FastAPI", "TensorFlow", "PyTorch", "OpenCV"],
+    eda: ["Pandas", "NumPy", "Seaborn", "Matplotlib"],
+    frontend: ["React", "Next.js", "Tailwind CSS", "ShadCN"],
+    languages: ["Python", "TypeScript", "JavaScript", "C++"],
+    tools: ["Git", "Docker", "DBeaver", "MongoDB", "Supabase"]
+};
 
-  return (
-    <>
-      <div className="fixed inset-0 w-full h-full z-0">
-        <Aurora
-          colorStops={["#0a0f3d", "#1b2ea0", "#5a1d84"]}
-          blend={0.2}
-          amplitude={1.0}
-          speed={1.0}
-        />
-      </div>
-      {/* Main Content */}
-      <main className="max-w-2xl mx-auto px-4 py-10 relative z-10">
-        {/* About */}
-        <section className="mb-16">
-          <div className="mb-6 pl-4">  
-            <div className="flex flex-col md:flex-row items-start gap-8 mb-8">
-            <div className="flex flex-col items-center space-y-6">
-              <TiltedTile
-                imageSrc="/headshot1.png"
-                altText="Richard Li headshot"
-                captionText="yoooooo"
-                containerHeight="280px"
-                containerWidth="280px"
-                imageHeight="280px"
-                imageWidth="280px"
-                scaleOnHover={1.1}
-                rotateAmplitude={14}
-                showMobileWarning={true}
-                showTooltip={true}
-                overlayContent={null}
-                displayOverlayContent={false}
-              />  
-      
-              <div className="text-center mt-6">
-                <h1 className="text-lg font-normal text-white">Richard Li</h1>
-                <p className="text-white/60 mt-2 text-sm">Data Engineer @ RBC</p>
-              </div>
-            </div>
-            <div className="text-center md:ml-6">
-            <h2 className="text-2xl font-light mb-6 text-white tracking-wider uppercase relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-px after:bg-white/40">About</h2>
-              <p className="text-white/70 leading-relaxed mb-4 text-left text-md">
-                Rising sophomore @ UCLA majoring in Statistics and Data Science and minoring in Data Science Engineering (DSE), interested in geospatial engineering, software engineering and deep machine learning.
-              </p>
-              <p className="text-white/70 leading-relaxed mb-4 text-left text-md">
-                This summer I&apos;m locking in on my 9-5 Data Engineering Internship @ RBC, working under their Data Analytics and Innovation team. Also taking CS32 (Data Structures and Algorithms) and on that Neetcode Grind
-              </p>
-              
-              
-            </div>
-          </div>
-          </div>
-        </section>
+const categories = [
+  { value: 'all', label: 'all' },
+  { value: 'backend', label: '  ackend' },
+  { value: 'eda', label: 'EDA' },
+  { value: 'frontend', label: 'Frontend' },
+  { value: 'languages', label: 'Languages' },
+  { value: 'tools', label: 'Tools' }
+];
 
-        {/* Projects */}
-        <section className="mb-16">
-          <div className="mb-6 text-center">
-            <h2 className="text-2xl font-light mb-10 text-white tracking-wider uppercase relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-px after:bg-white/40">Projects</h2>
-          
-            <div className="space-y-10">
-            {projects.map((project, index) => (
+const allSkills = Object.values(skillsByCategory).flat();
 
-              <div key={index} className="mb-10 text-left">
-                <h3 className="text-xl font-light text-white mb-3">{project.title}</h3>
-                <h6 className="text-sm font-medium text-white/90 mb-3">{project.award}</h6>
-                <p className="text-white/80 mb-4 text-lg leading-relaxed">{project.description}</p>
-                <p className="text-sm text-white/70 mb-4 font-medium">{project.tech}</p>
-                
-                <a 
-                  href={project.link} 
-                  className="text-blue-300 hover:text-blue-200 text-sm px-4 py-2 rounded-md border border-blue-400/30 inline-block transition-colors"
-                >
-                  View Project →
-                </a>
-              </div>
-            ))}
-          </div>
-          </div>
-        </section>
+const experiences = [
+  {
+    title: "data engineer intern",
+    org: "RBC Global Asset Management",
+    time: "05 -> 08 2025",
+    description: "under data analytics innovations team, working on making a recommendation model for its internal g.r.i.d. platform"
+  },
+  {
+    title: "undergraduate researcher",
+    org: "UCLA Bruin Sports Analytics",
+    time: "09 2024 -> 05 2025",
+    description: "eda analysis on \"underdogs\" in nba, research on wide receiver blocking effectiveness in nfl "
+  },
+  {
+    title: "data engineer intenr",
+    org: "JuHe Data",
+    time: "07 -> 08 2025",
+    description: "backend api development"
+  }
+];
 
-        {/* Skills */}
-        
-        <section className="mb-16">
-          <div className="mb-6 text-center">
-            <h2 className="text-2xl font-light text-center mb-10 text-white tracking-wider uppercase relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:mx-auto after:w-16 after:h-px after:bg-white/40">Skills</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="col-span-2 md:col-span-1 text-center">
-                <h3 className="text-md font-bold mb-2 text-white/80">Languages</h3>
-                <div className="space-y-1">
-                  {["JavaScript", "TypeScript", "Python","C++"].map((skill) => (
-                    <div 
-                      key={skill} 
-                      className="text-white/70 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-white/10 hover:text-white hover:scale-105 cursor-default text-center"
-                    >
-                      {skill}
+const projects = [
+  {
+    title: "embers",
+    time: "04 2025",
+    description1: "best use of gemeni api & first overall fintech @ lahacks",
+    description2: "insurance evaluation platform for post disaster claims",
+    links: [
+      { url: "https://devpost.com/software/insurefire", label: "devpost" },
+      { url: "https://github.com/dkyxhjj/insurefire", label: "github" }
+    ]
+  },
+  {
+    title: "iassist",
+    time: "02 2025",
+    description1: "best use of groq api @ devfest                                        ",
+    description2: "real-time navigation assistant for the visually impaired",
+    links: [
+      { url: "https://devpost.com/software/iassist-qcnmbp", label: "devpost" },
+      { url: "https://github.com/dkyxhjj/iassist", label: "github" }
+    ]
+  },
+  {
+    title: "api store",
+    time: "08 2024",
+    description1: "intern project @ juhe data",
+    description2: "created a web app that allows users to search and compare APIs",
+    links: [
+      { url: "https://github.com/dkyxhjj/APIStoreNew", label: "GitHub" }
+    ]
+  },
+  {
+    title: "big data challenge",
+    time: "02 2024",
+    description1: "digital research award",
+    description2: "used LiDAR and remote sensing data to predict global carbon sequestion rate",
+    links: [
+      { url: "https://www.linkedin.com/in/chengtai/details/projects/1727913872637/single-media-viewer/?profileId=ACoAACwQIR8BckOiClGazYcR7ZjgWeIbAnoj-Qw", label: "Paper" }
+    ]
+  }
+];
+
+export default function About() {
+    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+    const displayedSkills = selectedCategory.value === 'all' ? allSkills : skillsByCategory[selectedCategory.value];
+    return (
+        <>
+            <DarkVeil />    
+            <div className="min-h-screen flex flex-col items-center text-white font-mono relative z-20 pt-24 md:pt-32 pb-16">
+                <section>
+                    <h1 className="text-4xl md:text-2xl font-bold mb-4 text-center">chengtai (richard) li</h1>
+                    <p className="text-lg md:text-xl text-gray-200 text-center max-w-xl px-4">hello! im a data science student @ UCLA</p>
+                    <p className="mt-2 text-lg md:text-xl text-gray-200 text-center max-w-xl px-4">interested in data/software engineering</p>
+                    <p className="mt-2 text-lg md:text-xl text-gray-200 text-center max-w-xl px-4">reach out to me here <Link className="text-blue-500" href="https://linkedin.com/in/chengtai" target="_blank" rel="noopener noreferrer">linkedin</Link></p>
+                </section>
+
+                <section className="mt-16 w-full max-w-2xl">
+                    <h2 className="text-2xl font-semibold mb-4 text-center">experiences</h2>
+                    <div className="grid gap-4">
+                        {experiences.map((exp, idx) => (
+                            <div key={idx} className="border border-white/20 rounded-lg p-4 flex flex-col">
+                                <div className="flex items-center justify-between mb-1">
+                                    <span className="font-bold text-base text-white">{exp.title}</span>
+                                    <span className="text-xs text-white/60 font-mono">{exp.time}</span>
+                                </div>
+                                <div className="text-white/80 text-xs mb-1 italic">{exp.org}</div>
+                                <div className="text-white/80 text-sm">{exp.description}</div>
+                            </div>
+                        ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div className="col-span-2 md:col-span-1 text-center">
-                <h3 className="text-md font-bold mb-2 text-white/80">Frontend</h3>
-                <div className="space-y-1">
-                  {["React", "Next.js", "Tailwind CSS","ShadCN"].map((skill, index) => (
-                    <div 
-                      key={index} 
-                      className="text-white/70 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-white/10 hover:text-white hover:scale-105 cursor-default text-center"
-                    >
-                      {skill}
+                </section>
+                <section className="mt-16 w-full max-w-2xl">
+                    <h2 className="text-2xl font-semibold mb-4 text-center">cool stuff</h2>
+                    <div className="grid gap-4 md:grid-cols-2">
+                        {projects.map((project, idx) => (
+                            <div key={idx} className="border border-white/20 rounded-lg p-5 flex flex-col min-h-[170px]">
+                                <div className="flex items-center justify-between mb-2">
+                                    <span className="font-bold text-lg text-white">{project.title}</span>
+                                    <span className="text-xs text-white/60 font-mono">{project.time}</span>
+                                </div>
+                                <div className="text-white/90 text-sm mb-1">{project.description1}</div>
+                                <div className="text-white/70 text-xs mb-2">{project.description2}</div>
+                                {project.links && project.links.length > 0 && (
+                                    <div className="flex justify-center gap-2 mt-auto flex-wrap">
+                                        {project.links.map((l: { url: string; label: string }, i: number) => (
+                                            <a
+                                                key={i}
+                                                href={l.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-block text-blue-300 hover:text-blue-200 text-xs px-3 py-1 rounded border border-blue-400/30 transition-colors mb-1"
+                                            >
+                                                {l.label || 'External Link'}
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div className="col-span-2 md:col-span-1 text-center">
-                <h3 className="text-md font-bold mb-2 text-white/80">Backend</h3>
-                <div className="space-y-1">
-                  {["Flask","FastAPI","OpenCV","Node.js"].map((skill, index) => (
-                    <div 
-                      key={index} 
-                      className="text-white/70 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-white/10 hover:text-white hover:scale-105 cursor-default text-center"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="col-span-2 md:col-span-1 text-center">
-                <h3 className="text-md font-bold mb-2 text-white/80">Databases & Tools</h3>
-                <div className="space-y-1">
-                  {["MongoDB","Supabase","Git","Docker"].map((skill) => (
-                    <div 
-                      key={skill} 
-                      className="text-white/70 text-sm px-3 py-1.5 rounded-md transition-all duration-200 hover:bg-white/10 hover:text-white hover:scale-105 cursor-default text-center"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </div>
+                </section>
             </div>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section>
-          <div className="pl-4 text-center">
-            <h2 className="text-2xl font-light mb-6 text-white tracking-wider uppercase relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-px after:bg-white/40">Contact</h2>
-            <div className="space-y-2">
-            <p className="text-white/70 text-md">
-              <span className="text-white/50">Email:</span> richardli1@g.ucla.edu
-            </p>
-            <p className="text-white/70 text-md">
-              <span className="text-white/50">GitHub:</span> 
-              <a href="https://github.com/dkyxhjj" className="text-blue-300 hover:text-blue-200 ml-1">
-                github.com/dkyxhjj
-              </a>
-            </p>
-            <p className="text-white/70 text-md">
-              <span className="text-white/50">LinkedIn:</span> 
-              <a href="https://www.linkedin.com/in/richardli14/" className="text-blue-300 hover:text-blue-200 ml-1">
-                linkedin.com/in/richardli14
-              </a>
-            </p>
-            </div>
-          </div>
-        </section>
-      </main>
-
-    </>
-  );
+        </>
+    )   
 }

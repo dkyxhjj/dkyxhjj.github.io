@@ -22,17 +22,14 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
               Richard Li
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">Software Developer • UCLA Student</p>
-            
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">Data Science @ UCLA</p>
             <div className="flex flex-wrap justify-center gap-4">
-              
               <Link 
-                href="/construction" 
+                href="/portfolio" 
                 className="px-8 py-3 border border-white hover:bg-white hover:bg-opacity-20 text-white font-medium transition-all"
-              >
+                >
                 View Portfolio
               </Link>
-
             </div>
           </div>
         </div>
