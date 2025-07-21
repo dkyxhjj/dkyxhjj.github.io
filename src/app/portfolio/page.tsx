@@ -25,9 +25,9 @@ const experiences = [
 
 const projects = [
   {
-    title: "embers",
+    title: "embers | lahacks 2025",
     time: "04 2025",
-    description1: "best use of gemeni api & first overall fintech @ lahacks",
+    description1: "best use of google gemini & 1st ovrl fintech",
     description2: "insurance evaluation platform for post disaster claims",
     tags: ["opencv", "nextjs", "supabase", "fastapi", "Gemini API"],
     links: [
@@ -36,9 +36,9 @@ const projects = [
     ]
   },
   {
-    title: "iassist",
+    title: "iassist | devfest 2025",
     time: "02 2025",
-    description1: "best use of groq api @ devfest                                        ",
+    description1: "best use of groq api",
     description2: "real-time navigation assistant for the visually impaired",
     tags: ["opencv", "nextjs", "groq API", "flask"],
     links: [
