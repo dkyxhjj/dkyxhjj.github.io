@@ -40,7 +40,7 @@ const projects = [
   {
     title: "embers | lahacks 2025",
     time: "04 2025",
-    description1: "best use of google gemini, 1st overall in fintech",
+    description1: "best use of gemini, 1st in fintech",
     description2: "insurance evaluation platform for post disaster claims",
     links: [
       { url: "https://devpost.com/software/insurefire", label: "devpost" },
@@ -49,9 +49,9 @@ const projects = [
     ]
   },
   {
-    title: "iassist | devfest 2025",
+    title: "iassist",
     time: "02 2025",
-    description1: "best use of groq api",
+    description1: "best use of groq api @ devfest",
     description2: "real-time navigation assistant for the visually impaired",
     links: [
       { url: "https://devpost.com/software/iassist-qcnmbp", label: "devpost" },
@@ -151,10 +151,10 @@ export default function About() {
                         <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-lg px-6 py-4 max-w-xl w-full">
                             <h3 className="text-xl font-bold mb-4 text-center text-white-400">get to know me a bit more :D</h3>
                             <ul className="list-disc list-inside text-lg space-y-2 text-white/80">
-                                <li><span className="font-bold text-blue-500">Currently @ RBC</span> as a <span className="font-semibold text-blue-300">data engineer</span></li>
+                                <li><span className="font-bold text-blue-500">currently @ rbc</span> as a <span className="font-semibold text-blue-300">data engineer</span></li>
                                 <li><span className="font-bold text-blue-400">from a small town called <span className='text-blue-300'>toronto, canada!!!</span></span></li>
-                                <li><span className="font-bold text-blue-400">Recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
-                                <li><span className="font-bold text-blue-400">I eat a lot:</span> <span className="text-blue-200">follow me on beli @dcky</span></li>
+                                <li><span className="font-bold text-blue-400">recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
+                                <li><span className="font-bold text-blue-400">certified big back: </span> <span className="text-blue-200">follow me on beli @dcky</span></li>
                             </ul>
                         </div>
                     </div>
