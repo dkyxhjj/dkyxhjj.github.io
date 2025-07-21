@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import DarkVeil from './components/DarkVeil';
+import JokeIsland from './components/JokeIsland';
 
 
 export default function Home() {
@@ -23,10 +24,16 @@ export default function Home() {
               Richard Li
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">Data Science @ UCLA</p>
-            <div className="flex flex-wrap justify-center gap-4">
+            
+            {/* Dynamic Island with Programming Jokes */}
+            <div className="my-12">
+              <JokeIsland />
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4 mt-12">
               <Link 
                 href="/portfolio" 
-                className="px-8 py-3 border border-white hover:bg-white hover:bg-opacity-20 text-white font-medium transition-all"
+                className="px-16 py-6 border border-white border-opacity-30 hover:border-opacity-60 hover:bg-white hover:bg-opacity-10 text-white font-medium transition-all rounded-full"
                 >
                 View Portfolio
               </Link>
