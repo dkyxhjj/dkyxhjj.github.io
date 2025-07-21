@@ -135,7 +135,7 @@ export default function About() {
                     <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-3xl mx-auto w-full">
                     <h1 className="text-4xl md:text-3xl font-bold mb-3 text-center">Chengtai (Richard) Li</h1>
                     <p className="text-lg text-gray-200 text-center max-w-2xl mx-auto mb-2">
-                        hello! i'm a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
+                        hello! i&apos;m a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
                     </p>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
