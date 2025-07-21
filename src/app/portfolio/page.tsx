@@ -28,6 +28,16 @@ const experiences = [
 
 const projects = [
   {
+    title: "pocket pro",
+    time: "07 2025",
+    description1: "poker bank management tool & ledger",
+    description2: "learned to connect frontend with backend fast + used auth",
+    links: [
+          { url: "https://pokerapp-flame.vercel.app/", label: "website" },
+          { url: "https://github.com/dkyxhjj/pocketpro", label: "github" },
+        ]
+      },
+  {
     title: "chengtai.info",
     time: "07 2025",
     description1: "personal website",
