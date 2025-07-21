@@ -6,7 +6,7 @@ const experiences = [
   {
     title: "data engineer intern",
     org: "RBC Global Asset Management",
-    time: "05 -> 08 2025",
+    time: "05 2025 -> 08 2025",
     description: "under data analytics innovations team, working on making a recommendation model for its internal g.r.i.d. platform"
   },
   {
@@ -18,18 +18,27 @@ const experiences = [
   {
     title: "data engineer intern",
     org: "JuHe Data",
-    time: "07 -> 08 2025",
+    time: "07 2025 -> 08 2025",
     description: "backend api development"
   }
 ];
 
 const projects = [
   {
+    title: "chengtai.info",
+    time: "07 2025",
+    description1: "personal website",
+    description2: "built with next.js, tailwindcss, components from reactdev",
+    links: [
+          { url: "https://chengtai.info/", label: "website" },
+          { url: "https://github.com/dkyxhjj/dkyxhjj.github.io", label: "github" },
+        ]
+      },
+  {
     title: "embers | lahacks 2025",
     time: "04 2025",
-    description1: "best use of google gemini & 1st ovrl fintech",
+    description1: "best use of google gemini, 1st overall in fintech",
     description2: "insurance evaluation platform for post disaster claims",
-    tags: ["opencv", "nextjs", "supabase", "fastapi", "Gemini API"],
     links: [
       { url: "https://devpost.com/software/insurefire", label: "devpost" },
       { url: "https://github.com/dkyxhjj/insurefire", label: "github" },
@@ -41,7 +50,6 @@ const projects = [
     time: "02 2025",
     description1: "best use of groq api",
     description2: "real-time navigation assistant for the visually impaired",
-    tags: ["opencv", "nextjs", "groq API", "flask"],
     links: [
       { url: "https://devpost.com/software/iassist-qcnmbp", label: "devpost" },
       { url: "https://github.com/dkyxhjj/iassist", label: "github" }
@@ -52,9 +60,8 @@ const projects = [
     time: "08 2024",
     description1: "intern project @ juhe data",
     description2: "created a web app that allows users to search and compare APIs",
-    tags: ["Full Stack", "PHP", "Laravel", "API"],
     links: [
-      { url: "https://github.com/dkyxhjj/APIStoreNew", label: "GitHub" }
+      { url: "https://github.com/dkyxhjj/APIStoreNew", label: "github" }
     ]
   },
   {
@@ -62,9 +69,17 @@ const projects = [
     time: "02 2024",
     description1: "digital research award",
     description2: "used LiDAR and remote sensing data to predict global carbon sequestion rate",
-    tags: ["Python", "LiDAR", "Remote Sensing", "Research"],
     links: [
       { url: "https://www.linkedin.com/in/chengtai/details/projects/1727913872637/single-media-viewer/?profileId=ACoAACwQIR8BckOiClGazYcR7ZjgWeIbAnoj-Qw", label: "Paper" }
+    ]
+  },
+  {
+    title: "paper abt dst",
+    time: "09 2023",
+    description1: "published on JSR",
+    description2: "argumentative paper on ending daylight saving time due to its negative effects.",
+    links: [
+      { url: "https://www.jsr.org/hs/index.php/path/article/view/4259", label: "Paper" }
     ]
   }
 ];
@@ -79,7 +94,8 @@ export default function About() {
 
     return (
         <>
-            <DarkVeil />    
+            <DarkVeil />
+            
             <div className="min-h-screen flex flex-col items-center text-white font-mono relative z-20 pt-24 md:pt-32 pb-16">
                 
                 {/* Navigation Island */}
@@ -134,54 +150,49 @@ export default function About() {
                         ))}
                     </div>
                 </section>
-                <section id="projects" className="mt-16 w-full max-w-4xl">
-                    <h2 className="text-2xl font-semibold mb-6 text-center">cool stuff</h2>
+                <section id="projects" className="mt-16 w-full max-w-4xl px-4">
+                    <h2 className="text-2xl font-semibold mb-8 text-center">projects</h2>
                     <div className="grid gap-6 md:grid-cols-2">
                         {projects.map((project, idx) => (
-                            <div key={idx} className="group relative bg-black/40 backdrop-blur-md border border-white/30 rounded-2xl p-6 flex flex-col min-h-[220px] hover:border-white/50 hover:bg-black/50 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10 hover:-translate-y-1">
-                                {/* Header */}
-                                <div className="flex items-center justify-between mb-3">
-                                    <span className="font-bold text-xl text-white group-hover:text-white/90 transition-colors">{project.title}</span>
-                                    <span className="text-xs text-white/60 font-mono bg-white/10 px-2 py-1 rounded-full">{project.time}</span>
+                            <div key={idx} className="group relative overflow-hidden border border-white/20 rounded-2xl p-6 hover:border-white/40 transition-all duration-300 bg-gradient-to-br from-black/10 via-black/5 to-transparent backdrop-blur-sm shadow-lg hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1">
+                                {/* Subtle gradient overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
+                                
+                                {/* Header with consistent spacing */}
+                                <div className="relative flex items-start justify-between mb-4 w-full">
+                                    <div className="flex flex-col flex-1 min-w-0">
+                                        <h3 className="font-bold text-xl text-white group-hover:text-white/95 transition-all duration-300 tracking-tight mb-3">{project.title}</h3>
+                                        {/* Awards section with fixed height for alignment */}
+                                        <div className="flex gap-2 items-center">
+                                            {(project.description1) ? (
+                                                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-white/15 to-white/10 text-white/90 text-xs font-semibold border border-white/25 backdrop-blur-sm shadow-sm hover:from-white/20 hover:to-white/15 transition-all duration-200 whitespace-nowrap">
+                                                    {project.description1}
+                                                </span>
+                                            ) : (
+                                                <div className="h-6"></div> // Spacer for projects without awards
+                                            )}
+                                        </div>
+                                    </div>
+                                    <span className="text-sm text-white/50 font-mono ml-6 flex-shrink-0 bg-white/5 px-3 py-1 rounded-md border border-white/10 self-start">{project.time}</span>
                                 </div>
                                 
-                                {/* Descriptions */}
-                                <div className="text-white/90 text-sm mb-2 font-medium">{project.description1}</div>
-                                <div className="text-white/70 text-xs mb-4 leading-relaxed">{project.description2}</div>
-                                
-                                {/* Tags */}
-                                {project.tags && project.tags.length > 0 && (
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {project.tags.map((tag: string, tagIdx: number) => (
-                                            <span
-                                                key={tagIdx}
-                                                className="text-xs px-2 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 text-blue-200 rounded-full font-medium hover:from-blue-500/30 hover:to-purple-500/30 transition-all"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-                                )}
-                                
-                                {/* Links */}
-                                {project.links && project.links.length > 0 && (
-                                    <div className="flex justify-start gap-3 mt-auto flex-wrap">
+                                {/* Description, Tags, Links Aligned */}
+                                <div className="relative flex flex-col items-start w-full space-y-4">
+                                    <div className="text-white/75 text-sm leading-relaxed w-full font-medium">{project.description2}</div>
+                                    <div className="flex justify-center gap-2 mt-auto flex-wrap">
                                         {project.links.map((l: { url: string; label: string }, i: number) => (
                                             <a
                                                 key={i}
                                                 href={l.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center text-green-300 hover:text-green-200 text-xs px-4 py-2 rounded-full border border-green-400/40 hover:border-green-400/60 hover:bg-green-400/10 transition-all font-medium"
+                                                className="inline-block text-blue-300 hover:text-blue-200 text-xs px-3 py-1 rounded border border-blue-400/30 transition-colors mb-1"
                                             >
                                                 {l.label || 'External Link'}
-                                                <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                                </svg>
                                             </a>
                                         ))}
                                     </div>
-                                )}
+                                </div>
                             </div>
                         ))}
                     </div>
