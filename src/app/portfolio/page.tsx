@@ -32,7 +32,8 @@ const projects = [
     tags: ["opencv", "nextjs", "supabase", "fastapi", "Gemini API"],
     links: [
       { url: "https://devpost.com/software/insurefire", label: "devpost" },
-      { url: "https://github.com/dkyxhjj/insurefire", label: "github" }
+      { url: "https://github.com/dkyxhjj/insurefire", label: "github" },
+      { url: "https://github.com/dkyxhjj/insurefire", label: "demo" } 
     ]
   },
   {
@@ -164,7 +165,7 @@ export default function About() {
                                 
                                 {/* Links */}
                                 {project.links && project.links.length > 0 && (
-                                    <div className="flex justify-center gap-3 mt-auto flex-wrap">
+                                    <div className="flex justify-start gap-3 mt-auto flex-wrap">
                                         {project.links.map((l: { url: string; label: string }, i: number) => (
                                             <a
                                                 key={i}
