@@ -16,7 +16,7 @@ const experiences = [
     description: "eda analysis on \"underdogs\" in nba, research on wide receiver blocking effectiveness in nfl "
   },
   {
-    title: "data engineer intenr",
+    title: "data engineer intern",
     org: "JuHe Data",
     time: "07 -> 08 2025",
     description: "backend api development"
