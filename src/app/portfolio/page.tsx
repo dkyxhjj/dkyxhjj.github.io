@@ -7,19 +7,22 @@ const experiences = [
     title: "data engineer intern",
     org: "RBC Global Asset Management",
     time: "05 2025 -> 08 2025",
-    description: "under data analytics innovations team, working on making a recommendation model for its internal g.r.i.d. platform"
+    description: "under data analytics innovations team, working on making a recommendation model for its internal g.r.i.d. platform",
+    skills: ["Python", "PySpark", "Alternating Least Squares", "Jira", "Confluence"]
   },
   {
     title: "undergraduate researcher",
     org: "UCLA Bruin Sports Analytics",
     time: "09 2024 -> 05 2025",
-    description: "eda analysis on \"underdogs\" in nba, research on wide receiver blocking effectiveness in nfl "
+    description: "eda analysis on \"underdogs\" in nba, research on wide receiver blocking effectiveness in nfl ",
+    skills: ["EDA", "Pandas", "Seaborn", "Matplotlib", "Pytorch", "Tensorflow"]
   },
   {
     title: "data engineer intern",
     org: "JuHe Data",
     time: "07 2025 -> 08 2025",
-    description: "backend api development"
+    description: "backend api development",
+    skills: ["PHP", "Laravel", "Livewire", "Backend"]
   }
 ];
 
@@ -128,29 +131,71 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <section id="about">
-                    <h1 className="text-4xl md:text-2xl font-bold mb-4 text-center">chengtai (richard) li</h1>
-                    <p className="text-lg md:text-xl text-gray-200 text-center max-w-xl px-4">hello! im a data science student @ UCLA</p>
-                    <p className="mt-2 text-lg md:text-xl text-gray-200 text-center max-w-xl px-4">interested in data/software engineering</p>
-                    <p className="mt-2 text-lg md:text-xl text-gray-200 text-center max-w-xl px-4">reach out to me here <Link className="text-blue-500" href="https://linkedin.com/in/chengtai" target="_blank" rel="noopener noreferrer">linkedin</Link></p>
+                <section id="about" className="mb-12">
+                    <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-3xl mx-auto w-full">
+                    <h1 className="text-4xl md:text-3xl font-bold mb-3 text-center">Chengtai (Richard) Li</h1>
+                    <p className="text-lg text-gray-200 text-center max-w-2xl mx-auto mb-2">
+                        hello! i'm a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
+                    </p>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
+                        <span className="bg-blue-900/40 px-3 py-1 rounded-full text-blue-200 text-sm font-semibold">Data Science @ UCLA</span>
+                        <span className="bg-green-900/40 px-3 py-1 rounded-full text-green-200 text-sm font-semibold">Reinforcement ML</span>
+                        <span className="bg-purple-900/40 px-3 py-1 rounded-full text-purple-200 text-sm font-semibold">Computer Vision</span>
+                    </div>
+                    
+                   
+
+                    {/* fun facts */}
+                    <div className="w-full flex justify-center mb-4">
+                        <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-lg px-6 py-4 max-w-xl w-full">
+                            <h3 className="text-xl font-bold mb-4 text-center text-white-400">get to know me a bit more :D</h3>
+                            <ul className="list-disc list-inside text-lg space-y-2 text-white/80">
+                                <li><span className="font-bold text-blue-500">Currently @ RBC</span> as a <span className="font-semibold text-blue-300">data engineer</span></li>
+                                <li><span className="font-bold text-blue-400">from a small town called <span className='text-blue-300'>toronto, canada!!!</span></span></li>
+                                <li><span className="font-bold text-blue-400">Recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
+                                <li><span className="font-bold text-blue-400">I eat a lot:</span> <span className="text-blue-200">follow me on beli @dcky</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p className="text-lg text-gray-200 text-center max-w-2xl mx-auto mb-2">
+                        im always interested on working on new projects, reach out to me if you have any questions or want to collaborate!
+                    </p>
+                    <p className="mt-2 text-md text-center text-blue-300">
+                        <Link href="mailto:chengtai.li@ucla.edu" className="underline hover:text-blue-400">richardli1@g.ucla.edu</Link> ·
+                        <Link href="https://linkedin.com/in/chengtai" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 ml-2">LinkedIn</Link> ·
+                        <Link href="https://github.com/dkyxhjj" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 ml-2">GitHub</Link> ·
+                        <Link href="https://devpost.com/richardli-060411" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 ml-2">Devpost</Link>
+                    </p>
+                </div>
                 </section>
 
-                <section id="experiences" className="mt-16 w-full max-w-2xl">
+                <section id="experiences" className="mt-16 w-full">
+                  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-3xl mx-auto w-full">
                     <h2 className="text-2xl font-semibold mb-4 text-center">experiences</h2>
                     <div className="grid gap-4">
                         {experiences.map((exp, idx) => (
                             <div key={idx} className="border border-white/20 rounded-lg p-4 flex flex-col">
                                 <div className="flex items-center justify-between mb-1">
-                                    <span className="font-bold text-base text-white">{exp.title}</span>
+                                    <span className="font-bold text-xl tracking-wide text-white">{exp.title}</span>
                                     <span className="text-xs text-white/60 font-mono">{exp.time}</span>
                                 </div>
-                                <div className="text-white/80 text-xs mb-1 italic">{exp.org}</div>
-                                <div className="text-white/80 text-sm">{exp.description}</div>
+                                <div className="text-white/80 text-lg font-semibold mb-1 italic">{exp.org}</div>
+                                <div className="text-white/90 text-sm mb-2">{exp.description}</div>
+                                <div className="flex flex-wrap gap-2 mb-1">
+                                  {exp.skills && exp.skills.map((skill, i) => (
+                                    <span key={i} className="bg-blue-900/40 text-blue-200 px-2 py-1 rounded-full text-xs font-semibold">
+                                      {skill}
+                                    </span>
+                                  ))}
+                                </div>
                             </div>
                         ))}
                     </div>
+                  </div>
                 </section>
-                <section id="projects" className="mt-16 w-full max-w-4xl px-4">
+                <section id="projects" className="mt-16 w-full">
+                  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-4xl mx-auto w-full">
                     <h2 className="text-2xl font-semibold mb-8 text-center">projects</h2>
                     <div className="grid gap-6 md:grid-cols-2">
                         {projects.map((project, idx) => (
@@ -196,6 +241,7 @@ export default function About() {
                             </div>
                         ))}
                     </div>
+                  </div>
                 </section>
             </div>
         </>
