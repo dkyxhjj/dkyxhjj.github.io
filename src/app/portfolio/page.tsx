@@ -55,7 +55,7 @@ const projects = [
     links: [
       { url: "https://devpost.com/software/insurefire", label: "devpost" },
       { url: "https://github.com/dkyxhjj/insurefire", label: "github" },
-      { url: "https://github.com/dkyxhjj/insurefire", label: "demo" } 
+      { url: "https://www.youtube.com/watch?v=t9eNwyadORQ&ab_channel=RichardLi", label: "demo" } 
     ]
   },
   {
