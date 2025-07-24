@@ -147,51 +147,51 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-<section id="about" className="mb-16">
-  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-10 max-w-3xl mx-auto text-white text-center space-y-6">
-    {/* Name + Intro */}
-    <div className="space-y-3">
-      <h1 className="text-4xl font-bold">Chengtai (Richard) Li</h1>
-      <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-        hello! i'm a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
-      </p>
-    </div>
+                <section id="about" className="mb-16">
+                    <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-10 max-w-3xl mx-auto text-white text-center space-y-6">
+                        {/* Name + Intro */}
+                        <div className="space-y-3">
+                            <h1 className="text-4xl font-bold">Chengtai (Richard) Li</h1>
+                            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                                hello! i&apos;m a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
+                            </p>
+                        </div>
 
-    {/* Tags */}
-    <div className="flex flex-wrap justify-center gap-3">
-      <span className="bg-blue-900/40 px-3 py-1 rounded-full text-blue-200 text-sm font-semibold">Data Science @ UCLA</span>
-      <span className="bg-green-900/40 px-3 py-1 rounded-full text-green-200 text-sm font-semibold">Reinforcement ML</span>
-      <span className="bg-purple-900/40 px-3 py-1 rounded-full text-purple-200 text-sm font-semibold">Computer Vision</span>
-    </div>
+                        {/* Tags */}
+                        <div className="flex flex-wrap justify-center gap-3">
+                            <span className="bg-blue-900/40 px-3 py-1 rounded-full text-blue-200 text-sm font-semibold">Data Science @ UCLA</span>
+                            <span className="bg-green-900/40 px-3 py-1 rounded-full text-green-200 text-sm font-semibold">Reinforcement ML</span>
+                            <span className="bg-purple-900/40 px-3 py-1 rounded-full text-purple-200 text-sm font-semibold">Computer Vision</span>
+                        </div>
 
-    {/* Fun Facts */}
-    <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-md px-6 py-6 text-left max-w-xl mx-auto">
-      <h3 className="text-xl font-bold text-center mb-4 text-white/90">get to know me a bit more :D</h3>
-      <ul className="list-disc list-inside text-white/80 space-y-3 text-base">
-        <li><span className="font-semibold text-blue-400">currently @ rbc</span> as a <span className="font-medium text-blue-300">data engineer intern</span></li>
-        <li><span className="font-semibold text-blue-400">from a small town called</span> <span className="text-blue-300">toronto, canada!!!</span></li>
-        <li><span className="font-semibold text-blue-400">recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
-        <li><span className="font-semibold text-blue-400">certified big back:</span> <span className="text-blue-200">follow me on beli @dcky</span></li>
-      </ul>
-    </div>
+                        {/* Fun Facts */}
+                        <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-md px-6 py-6 text-left max-w-xl mx-auto">
+                            <h3 className="text-xl font-bold text-center mb-4 text-white/90">get to know me a bit more :D</h3>
+                            <ul className="list-disc list-inside text-white/80 space-y-3 text-base">
+                                <li><span className="font-semibold text-blue-400">currently @ rbc</span> as a <span className="font-medium text-blue-300">data engineer intern</span></li>
+                                <li><span className="font-semibold text-blue-400">from a small town called</span> <span className="text-blue-300">toronto, canada!!!</span></li>
+                                <li><span className="font-semibold text-blue-400">recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
+                                <li><span className="font-semibold text-blue-400">certified big back:</span> <span className="text-blue-200">follow me on beli @dcky</span></li>
+                            </ul>
+                        </div>
 
-    {/* Outro */}
-    <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-      i'm always interested in working on new projects—reach out if you have any questions or want to collaborate!
-    </p>
+                        {/* Outro */} 
+                        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                            i&apos;m always interested in working on new projects—reach out if you have any questions or want to collaborate!
+                        </p>
 
-    {/* Links */}
-    <div className="text-blue-300 space-x-4 text-sm">
-      <Link href="mailto:richardli1@g.ucla.edu" className="underline hover:text-blue-400">richardli1@g.ucla.edu</Link>
-      <span>·</span>
-      <Link href="https://linkedin.com/in/chengtai" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">LinkedIn</Link>
-      <span>·</span>
-      <Link href="https://github.com/dkyxhjj" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">GitHub</Link>
-      <span>·</span>
-      <Link href="https://devpost.com/richardli-060411" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">Devpost</Link>
-    </div>
-  </div>
-</section>
+                        {/* Links */}
+                        <div className="text-blue-300 space-x-4 text-sm">
+                            <Link href="mailto:richardli1@g.ucla.edu" className="underline hover:text-blue-400">richardli1@g.ucla.edu</Link>
+                            <span>·</span>
+                            <Link href="https://linkedin.com/in/chengtai" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">LinkedIn</Link>
+                            <span>·</span>
+                            <Link href="https://github.com/dkyxhjj" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">GitHub</Link>
+                            <span>·</span>
+                            <Link href="https://devpost.com/richardli-060411" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">Devpost</Link>
+                        </div>
+                    </div>
+                </section>
 
 
                 <section id="experiences" className="mt-16 w-full">
@@ -218,6 +218,7 @@ export default function About() {
                     </div>
                   </div>
                 </section>
+
                 <section id="projects" className="mt-16 w-full">
                   <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-4xl mx-auto w-full">
                     <h2 className="text-2xl font-semibold mb-8 text-center">projects</h2>
