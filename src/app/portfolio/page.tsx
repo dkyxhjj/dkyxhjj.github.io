@@ -115,59 +115,59 @@ export default function About() {
         <>
             <DarkVeil />
             
-            <div className="min-h-screen flex flex-col items-center text-white font-mono relative z-20 pt-24 md:pt-32 pb-16">
+            <div className="min-h-screen flex flex-col items-center text-white font-mono relative z-20 pt-20 md:pt-32 pb-8 px-4 md:px-0">
                 
                 {/* Navigation Island */}
-                <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-30">
-                    <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-3xl px-6 py-3 shadow-2xl">
-                        <div className="flex items-center gap-1">
-                            <div className="flex items-center gap-2 mr-4">
+                <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-30">
+                    <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl md:rounded-3xl px-3 md:px-6 py-2 md:py-3 shadow-2xl">
+                        <div className="flex items-center gap-1 justify-center">
+                            <div className="hidden md:flex items-center gap-2 mr-4">
                                 <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                             </div>
                             <button
                                 onClick={() => scrollToSection('about')}
-                                className="px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all"
+                                className="px-2 md:px-4 py-1 md:py-2 text-xs md:text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all"
                             >
                                 About
                             </button>
                             <button
                                 onClick={() => scrollToSection('experiences')}
-                                className="px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all"
+                                className="px-2 md:px-4 py-1 md:py-2 text-xs md:text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all"
                             >
-                                Experiences
+                                Experience
                             </button>
                             <button
                                 onClick={() => scrollToSection('projects')}
-                                className="px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all"
+                                className="px-2 md:px-4 py-1 md:py-2 text-xs md:text-sm text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-all"
                             >
                                 Projects
                             </button>
                         </div>
                     </div>
                 </div>
-                <section id="about" className="mb-16">
-                    <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-10 max-w-3xl mx-auto text-white text-center space-y-6">
+                <section id="about" className="mb-12 md:mb-16 w-full">
+                    <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-4 md:px-8 py-6 md:py-10 max-w-3xl mx-auto text-white text-center space-y-4 md:space-y-6">
                         {/* Name + Intro */}
-                        <div className="space-y-3">
-                            <h1 className="text-4xl font-bold">Chengtai (Richard) Li</h1>
-                            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                        <div className="space-y-2 md:space-y-3">
+                            <h1 className="text-2xl md:text-4xl font-bold">Chengtai (Richard) Li</h1>
+                            <p className="text-sm md:text-lg text-gray-300 max-w-2xl mx-auto">
                                 hello! i&apos;m a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
                             </p>
                         </div>
 
                         {/* Tags */}
-                        <div className="flex flex-wrap justify-center gap-3">
-                            <span className="bg-blue-900/40 px-3 py-1 rounded-full text-blue-200 text-sm font-semibold">Data Science @ UCLA</span>
-                            <span className="bg-green-900/40 px-3 py-1 rounded-full text-green-200 text-sm font-semibold">Reinforcement ML</span>
-                            <span className="bg-purple-900/40 px-3 py-1 rounded-full text-purple-200 text-sm font-semibold">Computer Vision</span>
+                        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                            <span className="bg-blue-900/40 px-2 md:px-3 py-1 rounded-full text-blue-200 text-xs md:text-sm font-semibold">Data Science @ UCLA</span>
+                            <span className="bg-green-900/40 px-2 md:px-3 py-1 rounded-full text-green-200 text-xs md:text-sm font-semibold">Reinforcement ML</span>
+                            <span className="bg-purple-900/40 px-2 md:px-3 py-1 rounded-full text-purple-200 text-xs md:text-sm font-semibold">Computer Vision</span>
                         </div>
 
                         {/* Fun Facts */}
-                        <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-md px-6 py-6 text-left max-w-xl mx-auto">
-                            <h3 className="text-xl font-bold text-center mb-4 text-white/90">get to know me a bit more :D</h3>
-                            <ul className="list-disc list-inside text-white/80 space-y-3 text-base">
+                        <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-md px-4 md:px-6 py-4 md:py-6 text-left max-w-xl mx-auto">
+                            <h3 className="text-lg md:text-xl font-bold text-center mb-3 md:mb-4 text-white/90">get to know me a bit more :D</h3>
+                            <ul className="list-disc list-inside text-white/80 space-y-2 md:space-y-3 text-sm md:text-base">
                                 <li><span className="font-semibold text-blue-400">currently @ rbc</span> as a <span className="font-medium text-blue-300">data engineer intern</span></li>
                                 <li><span className="font-semibold text-blue-400">from a small town called</span> <span className="text-blue-300">toronto, canada!!!</span></li>
                                 <li><span className="font-semibold text-blue-400">recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
@@ -176,35 +176,35 @@ export default function About() {
                         </div>
 
                         {/* Outro */} 
-                        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                        <p className="text-sm md:text-lg text-gray-300 max-w-2xl mx-auto">
                             i&apos;m always interested in working on new projects—reach out if you have any questions or want to collaborate!
                         </p>
 
                         {/* Links */}
-                        <div className="text-blue-300 space-x-4 text-sm">
+                        <div className="text-blue-300 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs md:text-sm">
                             <Link href="mailto:richardli1@g.ucla.edu" className="underline hover:text-blue-400">richardli1@g.ucla.edu</Link>
-                            <span>·</span>
+                            <span className="hidden md:inline">·</span>
                             <Link href="https://linkedin.com/in/chengtai" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">LinkedIn</Link>
-                            <span>·</span>
+                            <span className="hidden md:inline">·</span>
                             <Link href="https://github.com/dkyxhjj" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">GitHub</Link>
-                            <span>·</span>
+                            <span className="hidden md:inline">·</span>
                             <Link href="https://devpost.com/richardli-060411" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">Devpost</Link>
                         </div>
                     </div>
                 </section>
 
 
-                <section id="experiences" className="mt-16 w-full">
-                  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-3xl mx-auto w-full">
-                    <h2 className="text-2xl font-semibold mb-4 text-center">experiences</h2>
+                <section id="experiences" className="mt-12 md:mt-16 w-full">
+                  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-4 md:px-8 py-6 md:py-8 max-w-3xl mx-auto w-full">
+                    <h2 className="text-xl md:text-2xl font-semibold mb-4 text-center">experiences</h2>
                     <div className="grid gap-4">
                         {experiences.map((exp, idx) => (
-                            <div key={idx} className="border border-white/20 rounded-lg p-4 flex flex-col">
-                                <div className="flex items-center justify-between mb-1">
-                                    <span className="font-bold text-xl tracking-wide text-white">{exp.title}</span>
-                                    <span className="text-xs text-white/60 font-mono">{exp.time}</span>
+                            <div key={idx} className="border border-white/20 rounded-lg p-3 md:p-4 flex flex-col">
+                                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 md:mb-1">
+                                    <span className="font-bold text-lg md:text-xl tracking-wide text-white">{exp.title}</span>
+                                    <span className="text-xs text-white/60 font-mono mt-1 md:mt-0">{exp.time}</span>
                                 </div>
-                                <div className="text-white/80 text-lg font-semibold mb-1 italic">{exp.org}</div>
+                                <div className="text-white/80 text-base md:text-lg font-semibold mb-1 italic">{exp.org}</div>
                                 <div className="text-white/90 text-sm mb-2">{exp.description}</div>
                                 <div className="flex flex-wrap gap-2 mb-1">
                                   {exp.skills && exp.skills.map((skill, i) => (
@@ -219,35 +219,35 @@ export default function About() {
                   </div>
                 </section>
 
-                <section id="projects" className="mt-16 w-full">
-                  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-8 py-8 max-w-4xl mx-auto w-full">
-                    <h2 className="text-2xl font-semibold mb-8 text-center">projects</h2>
-                    <div className="grid gap-6 md:grid-cols-2">
+                <section id="projects" className="mt-12 md:mt-16 w-full">
+                  <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-4 md:px-8 py-6 md:py-8 max-w-4xl mx-auto w-full">
+                    <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-center">projects</h2>
+                    <div className="grid gap-4 md:gap-6 md:grid-cols-2">
                         {projects.map((project, idx) => (
-                            <div key={idx} className="group relative overflow-hidden border border-white/20 rounded-2xl p-6 hover:border-white/40 transition-all duration-300 bg-gradient-to-br from-black/10 via-black/5 to-transparent backdrop-blur-sm shadow-lg hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1">
+                            <div key={idx} className="group relative overflow-hidden border border-white/20 rounded-2xl p-4 md:p-6 hover:border-white/40 transition-all duration-300 bg-gradient-to-br from-black/10 via-black/5 to-transparent backdrop-blur-sm shadow-lg hover:shadow-2xl hover:shadow-black/20 hover:-translate-y-1">
                                 {/* Subtle gradient overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none"></div>
                                 
                                 {/* Header with consistent spacing */}
-                                <div className="relative flex items-start justify-between mb-4 w-full">
+                                <div className="relative flex flex-col md:flex-row md:items-start md:justify-between mb-3 md:mb-4 w-full">
                                     <div className="flex flex-col flex-1 min-w-0">
-                                        <h3 className="font-bold text-xl text-white group-hover:text-white/95 transition-all duration-300 tracking-tight mb-3">{project.title}</h3>
+                                        <h3 className="font-bold text-lg md:text-xl text-white group-hover:text-white/95 transition-all duration-300 tracking-tight mb-2 md:mb-3">{project.title}</h3>
                                         {/* Awards section with fixed height for alignment */}
                                         <div className="flex gap-2 items-center">
                                             {(project.description1) ? (
-                                                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-white/15 to-white/10 text-white/90 text-xs font-semibold border border-white/25 backdrop-blur-sm shadow-sm hover:from-white/20 hover:to-white/15 transition-all duration-200 whitespace-nowrap">
+                                                <span className="inline-block px-3 md:px-4 py-1 md:py-2 rounded-full bg-gradient-to-r from-white/15 to-white/10 text-white/90 text-xs font-semibold border border-white/25 backdrop-blur-sm shadow-sm hover:from-white/20 hover:to-white/15 transition-all duration-200 whitespace-nowrap">
                                                     {project.description1}
                                                 </span>
                                             ) : (
-                                                <div className="h-6"></div> // Spacer for projects without awards
+                                                <div className="h-6"></div>
                                             )}
                                         </div>
                                     </div>
-                                    <span className="text-sm text-white/50 font-mono ml-6 flex-shrink-0 bg-white/5 px-3 py-1 rounded-md border border-white/10 self-start">{project.time}</span>
+                                    <span className="text-xs md:text-sm text-white/50 font-mono md:ml-6 flex-shrink-0 bg-white/5 px-2 md:px-3 py-1 rounded-md border border-white/10 self-start mt-2 md:mt-0">{project.time}</span>
                                 </div>
                                 
                                 {/* Description, Tags, Links Aligned */}
-                                <div className="relative flex flex-col items-start w-full space-y-4">
+                                <div className="relative flex flex-col items-start w-full space-y-3 md:space-y-4">
                                     <div className="text-white/75 text-sm leading-relaxed w-full font-medium">{project.description2}</div>
                                     <div className="flex justify-center gap-2 mt-auto flex-wrap">
                                         {project.links.map((l: { url: string; label: string }, i: number) => (
