@@ -28,6 +28,24 @@ const experiences = [
 
 const projects = [
   {
+    title: "bruin vault",
+    time: "09 2025",
+    description1: "coming soon",
+    description2: "lots of scraping and schema designing right now",
+    links: [
+          { url: "https://www.shutterstock.com/image-vector/coming-soon-letter-hanging-door-600nw-2497993761.jpg", label: "coming soon" },
+        ]
+      },
+  {
+    title: "cordial ai",
+    time: "08 2025",
+    description1: "smart email assistant google extension",
+    description2: "it writes emails for you without that extra copy and paste step",
+    links: [
+          { url: "https://chromewebstore.google.com/detail/cordial-ai-email-writing/ibknpcfcoehmhfocljpcepedijfpnjhk", label: "chrome extension" },
+        ]
+      },
+  {
     title: "pocket pro",
     time: "07 2025",
     description1: "poker bank management tool & ledger",
