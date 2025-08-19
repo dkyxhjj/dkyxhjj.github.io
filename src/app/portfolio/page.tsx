@@ -4,24 +4,24 @@ import Link from 'next/link';
 
 const experiences = [
   {
-    title: "data engineer intern",
+    title: "Data Engineer Intern",
     org: "RBC Global Asset Management",
     time: "05 2025 -> 08 2025",
-    description: "under data analytics innovations team, working on making a recommendation model for its internal g.r.i.d. platform",
+    description: "Data and Innovation team, designed a collaborative filtering recommendation model, improving data discovery and personalization for 500+ internal users",
     skills: ["Python", "PySpark", "Alternating Least Squares", "Jira", "Confluence"]
   },
   {
-    title: "undergraduate researcher",
+    title: "Undergraduate Researcher",
     org: "UCLA Bruin Sports Analytics",
     time: "09 2024 -> 05 2025",
-    description: "eda analysis on \"underdogs\" in nba, research on wide receiver blocking effectiveness in nfl ",
+    description: "EDA analysis on \"underdogs\" in NBA, research on wide receiver blocking effectiveness in NFL ",
     skills: ["EDA", "Pandas", "Seaborn", "Matplotlib", "Pytorch", "Tensorflow"]
   },
   {
-    title: "data engineer intern",
+    title: "Data Engineer Intern",
     org: "JuHe Data",
     time: "07 2025 -> 08 2025",
-    description: "backend api development",
+    description: "Backend API development",
     skills: ["PHP", "Laravel", "Livewire", "Backend"]
   }
 ];
