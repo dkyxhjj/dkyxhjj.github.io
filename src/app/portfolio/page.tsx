@@ -20,7 +20,7 @@ const experiences = [
   {
     title: "Data Engineer Intern",
     org: "JuHe Data",
-    time: "07 2025 -> 08 2025",
+    time: "07 2024 -> 08 2024",
     description: "Backend API development",
     skills: ["PHP", "Laravel", "Livewire", "Backend"]
   }
@@ -36,6 +36,15 @@ const projects = [
           { url: "https://www.shutterstock.com/image-vector/coming-soon-letter-hanging-door-600nw-2497993761.jpg", label: "coming soon" },
         ]
       },
+  {
+    title: "ocr pdf scanner",
+    time: "09 2025",
+    description1: "made in china",
+    description2: "scans pdfs and converting them to LLM ready text",
+    links: [
+      { url: "https://github.com/dkyxhjj/ocr-pdf-scanner", label: "github" },
+      ]
+    },
   {
     title: "cordial ai",
     time: "08 2025",
