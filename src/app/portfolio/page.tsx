@@ -158,6 +158,32 @@ const projects = [
 
 export default function About() {
     const [activeFilter, setActiveFilter] = useState<string>('personal');
+    const [currentFactIndex, setCurrentFactIndex] = useState<number>(0);
+    
+    const funFacts = [
+        { label: "this past summer", value: "i worked @ rbc as a data engineer intern" },
+        { label: "from a small town called", value: "toronto, canada!!!" },
+        { label: "recent favs:", value: "the weeknd, laufey, men I trust, the marias" },
+        { label: "certified big back:", value: "follow me on beli @dcky" },
+        { label: "my favorite foods: ", value: "pho, khao soi, anything noodle " },
+        { label: "favorite data structure:", value: "linked lists are beautiful" },
+        { label: "current obsession:", value: "reinforcement learning and poker theory" },
+        { label: "fun fact:", value: "tyler the creator commented on my post before" },
+        { label: "favorite album of all time:", value: "Norman Fucking Rockwell - Lana Del Rey" },
+        { label: "favorite toronto restaurant:", value: "guigui korean skewers, so cheap so good" },
+        { label: "guilty pleasure:", value: "watching poker vlogs at 2am" },
+        { label: "random skill:", value: "i can distinguish different cuts of beef" },
+        { label: "top 3 artists rn:", value: "the weeknd, laufey, drake" },
+        { label: "favorite algorithm:", value: "dijkstra's - shortest path to everything" }
+    ];
+    
+    const getRandomFact = () => {
+        let newIndex;
+        do {
+            newIndex = Math.floor(Math.random() * funFacts.length);
+        } while (newIndex === currentFactIndex && funFacts.length > 1);
+        setCurrentFactIndex(newIndex);
+    };
     
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
@@ -237,13 +263,24 @@ export default function About() {
 
                         {/* Fun Facts */}
                         <div className="border border-white/20 rounded-xl bg-black/30 backdrop-blur-md shadow-md px-4 md:px-6 py-4 md:py-6 text-left max-w-xl mx-auto">
-                            <h3 className="text-lg md:text-xl font-bold text-center mb-3 md:mb-4 text-white/90">get to know me a bit more :D</h3>
-                            <ul className="list-disc list-inside text-white/80 space-y-2 md:space-y-3 text-sm md:text-base">
-                                <li><span className="font-semibold text-blue-400">currently @ rbc</span> as a <span className="font-medium text-blue-300">data engineer intern</span></li>
-                                <li><span className="font-semibold text-blue-400">from a small town called</span> <span className="text-blue-300">toronto, canada!!!</span></li>
-                                <li><span className="font-semibold text-blue-400">recent favs:</span> <span className="text-blue-200">laufey, clipse, black thought, men I trust, the marias</span></li>
-                                <li><span className="font-semibold text-blue-400">certified big back:</span> <span className="text-blue-200">follow me on beli @dcky</span></li>
-                            </ul>
+                            <div className="flex items-center justify-between mb-3 md:mb-4">
+                                <h3 className="text-lg md:text-xl font-bold text-white/90">get to know me a bit more :D</h3>
+                                <button
+                                    onClick={getRandomFact}
+                                    className="bg-blue-600/20 hover:bg-blue-600/40 border border-blue-400/30 hover:border-blue-400/60 text-blue-300 hover:text-blue-200 px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200 hover:scale-105"
+                                >
+                                    new fact
+                                </button>
+                            </div>
+                            <div className="text-white/80 text-sm md:text-base">
+                                <div className="flex items-start space-x-2">
+                                    <span className="text-blue-400">•</span>
+                                    <div>
+                                        <span className="font-semibold text-blue-400">{funFacts[currentFactIndex].label}</span>{' '}
+                                        <span className="text-blue-200">{funFacts[currentFactIndex].value}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Outro */} 
