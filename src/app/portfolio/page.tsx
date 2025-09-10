@@ -290,7 +290,7 @@ export default function About() {
                         {/* Now Link */}
                         <div className="text-center">
                             <Link href="/now" className="inline-block bg-blue-600/20 hover:bg-blue-600/40 border border-blue-400/30 hover:border-blue-400/60 text-blue-300 hover:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105">
-                                what i'm doing now →
+                                what i&apos;m doing now →
                             </Link>
                         </div>
 
