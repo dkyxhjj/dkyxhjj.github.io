@@ -1,6 +1,7 @@
 'use client'
 import DarkVeil from '../components/DarkVeil'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const experiences = [
@@ -171,7 +172,7 @@ export default function About() {
         { label: "random skill:", value: "i can distinguish different cuts of beef" },
         { label: "favorite algorithm:", value: "dijkstra's - shortest path to everything" },
         { label: "this song always gets me hype:", value: "9 - drake" },    
-        { label: "best meal i\'ve ever had:", value: "jeju noodle bar - new york city" },    
+        { label: "best meal i have ever had:", value: "jeju noodle bar - new york city" },    
         { label: "my desert island album:", value: "trilogy - the weekend" },    
     ];
     
@@ -407,9 +408,11 @@ export default function About() {
                                             rel="noopener noreferrer"
                                             className="relative w-full h-full block cursor-pointer hover:scale-105 transition-transform duration-300"
                                         >
-                                            <img 
+                                            <Image 
                                                 src={project.image} 
                                                 alt={project.title}
+                                                width={400}
+                                                height={300}
                                                 className="w-full h-full object-cover"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>

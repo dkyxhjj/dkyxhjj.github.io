@@ -2,6 +2,7 @@
 
 import DarkVeil from '../components/DarkVeil'
 import Link from 'next/link'
+import Image from 'next/image'
 const courses = [
   "STAT 100A - Intro to Probability",
   "ANTHRO 2 - Archaeology: Introduction",
@@ -23,9 +24,11 @@ export default function Now() {
                         <div className="flex justify-center gap-4">
                             <div className="flex flex-col items-center">
                                 <div className="w-36 h-36 rounded-lg overflow-hidden border border-white/20">
-                                    <img 
+                                    <Image 
                                         src="/images/now/corn.png" 
                                         alt="Latte"
+                                        width={144}
+                                        height={144}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -33,9 +36,11 @@ export default function Now() {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div className="w-36 h-36 rounded-lg overflow-hidden border border-white/20">
-                                    <img 
+                                    <Image 
                                         src="/images/now/suzhou.png" 
                                         alt="Suzhou"
+                                        width={144}
+                                        height={144}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -43,9 +48,11 @@ export default function Now() {
                             </div>
                             <div className="flex flex-col items-center">
                                 <div className="w-36 h-36 rounded-lg overflow-hidden border border-white/20">
-                                    <img 
+                                    <Image 
                                         src="/images/now/food.png" 
                                         alt="Food"
+                                        width={144}
+                                        height={144}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
