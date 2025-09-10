@@ -161,20 +161,18 @@ export default function About() {
     const [currentFactIndex, setCurrentFactIndex] = useState<number>(0);
     
     const funFacts = [
-        { label: "this past summer", value: "i worked @ rbc as a data engineer intern" },
-        { label: "from a small town called", value: "toronto, canada!!!" },
+        { label: "this past summer:", value: "i worked @ rbc as a data engineer intern" },
+        { label: "from a small town called:", value: "toronto, canada!!!" },
         { label: "recent favs:", value: "the weeknd, laufey, men I trust, the marias" },
         { label: "certified big back:", value: "follow me on beli @dcky" },
         { label: "my favorite foods: ", value: "pho, khao soi, anything noodle " },
-        { label: "favorite data structure:", value: "linked lists are beautiful" },
-        { label: "current obsession:", value: "reinforcement learning and poker theory" },
-        { label: "fun fact:", value: "tyler the creator commented on my post before" },
-        { label: "favorite album of all time:", value: "Norman Fucking Rockwell - Lana Del Rey" },
         { label: "favorite toronto restaurant:", value: "guigui korean skewers, so cheap so good" },
         { label: "guilty pleasure:", value: "watching poker vlogs at 2am" },
         { label: "random skill:", value: "i can distinguish different cuts of beef" },
-        { label: "top 3 artists rn:", value: "the weeknd, laufey, drake" },
-        { label: "favorite algorithm:", value: "dijkstra's - shortest path to everything" }
+        { label: "favorite algorithm:", value: "dijkstra's - shortest path to everything" },
+        { label: "this song always gets me hype:", value: "9 - drake" },    
+        { label: "best meal i\'ve ever had:", value: "jeju noodle bar - new york city" },    
+        { label: "my desert island album:", value: "trilogy - the weekend" },    
     ];
     
     const getRandomFact = () => {
@@ -250,15 +248,15 @@ export default function About() {
                         <div className="space-y-2 md:space-y-3">
                             <h1 className="text-2xl md:text-4xl font-bold">Chengtai (Richard) Li</h1>
                             <p className="text-sm md:text-lg text-gray-300 max-w-2xl mx-auto">
-                                hello! i&apos;m a rising sophomore at UCLA studying data science & statistics and minoring in data science engineering
+                                hello! i&apos;m a sophomore at UCLA studying data science & statistics and minoring in data science engineering
                             </p>
                         </div>
 
                         {/* Tags */}
                         <div className="flex flex-wrap justify-center gap-2 md:gap-3">
                             <span className="bg-blue-900/40 px-2 md:px-3 py-1 rounded-full text-blue-200 text-xs md:text-sm font-semibold">Data Science @ UCLA</span>
-                            <span className="bg-green-900/40 px-2 md:px-3 py-1 rounded-full text-green-200 text-xs md:text-sm font-semibold">Reinforcement ML</span>
-                            <span className="bg-purple-900/40 px-2 md:px-3 py-1 rounded-full text-purple-200 text-xs md:text-sm font-semibold">Computer Vision</span>
+                            <span className="bg-green-900/40 px-2 md:px-3 py-1 rounded-full text-green-200 text-xs md:text-sm font-semibold">Top 0.001% Drake Listener</span>
+                            <span className="bg-purple-900/40 px-2 md:px-3 py-1 rounded-full text-purple-200 text-xs md:text-sm font-semibold">Currently Unemployed</span>
                         </div>
 
                         {/* Fun Facts */}
@@ -287,6 +285,13 @@ export default function About() {
                         <p className="text-sm md:text-lg text-gray-300 max-w-2xl mx-auto">
                             i&apos;m always interested in working on new projects—reach out if you have any questions or want to collaborate!
                         </p>
+
+                        {/* Now Link */}
+                        <div className="text-center">
+                            <Link href="/now" className="inline-block bg-blue-600/20 hover:bg-blue-600/40 border border-blue-400/30 hover:border-blue-400/60 text-blue-300 hover:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:scale-105">
+                                what i'm doing now →
+                            </Link>
+                        </div>
 
                         {/* Links */}
                         <div className="text-blue-300 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs md:text-sm">
