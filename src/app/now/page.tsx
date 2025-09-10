@@ -16,7 +16,7 @@ export default function Now() {
             
             <div className="min-h-screen flex flex-col items-center text-white font-mono relative z-20 pt-20 md:pt-32 pb-8 px-4 md:px-0">
                 <div className="border border-white/20 rounded-2xl bg-black/30 backdrop-blur-md shadow-xl px-4 md:px-8 py-6 md:py-10 max-w-2xl mx-auto text-white space-y-6">
-                    <h1 className="text-2xl md:text-4xl font-bold text-center">What I'm Up To Now</h1>
+                    <h1 className="text-2xl md:text-4xl font-bold text-center">What I&apos;m Up To Now</h1>
                     
                     <div className="space-y-6">
                         {/* Picture Box */}
@@ -39,7 +39,7 @@ export default function Now() {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <p className="text-xs text-white/60 mt-2">Suzhou's Skyline</p>
+                                <p className="text-xs text-white/60 mt-2">Suzhou&apos;s Skyline</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div className="w-36 h-36 rounded-lg overflow-hidden border border-white/20">
